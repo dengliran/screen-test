@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html class="" style="height: 100%;">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<title></title>
+<style type="text/css">
+	*{margin: 0;padding: 0;}
+    body{font-size: 30px;}
+    #te{font-size: 12px;
+    	width: 100%;border:1px solid red;height: 100%;
+    	box-sizing:border-box;}
+</style>
+</head>
+<body style="height: 100%;">
+    <div id="te"></div>
+<script type="text/javascript">
+var a = document.getElementById('te')
+var t= "屏幕宽度："+screen.width+"屏幕高度："+screen.height+"<br>"
+	t += '浏览器宽度：'+document.documentElement.clientWidth || document.body.clientWidth;
+	t += '浏览器高度：'+document.documentElement.clientHeight || document.body.clientHeight;
+	// t += "<br>宽度："+document.getElementById('te').offsetWidth+";"+"宽度："+document.getElementById('te').offsetHeight
+a.innerHTML= t
+</script>
+</body>
+</html>
