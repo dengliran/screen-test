@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html class="" style="height: 100%;">
 <head>
 <meta charset="utf-8">
@@ -6,21 +6,28 @@
 <title></title>
 <style type="text/css">
 	*{margin: 0;padding: 0;}
-    body{font-size: 30px;}
-    #te{font-size: 12px;
+    body{font-size: 18px;}
+    #shell{
     	width: 100%;border:1px solid red;height: 100%;
     	box-sizing:border-box;}
+    #info{
+    	position: absolute;
+    	top: 50%;
+    	left: 50%;
+    	transform: translate3d(-50%,-50%,0);
+    }
 </style>
 </head>
 <body style="height: 100%;">
-    <div id="te"></div>
+    <div id="shell"></div>
+    <div id="info"></div>
 <script type="text/javascript">
-var a = document.getElementById('te')
-var t= "屏幕宽度："+screen.width+"屏幕高度："+screen.height+"<br>"
-	t += '浏览器宽度：'+document.documentElement.clientWidth || document.body.clientWidth;
-	t += '浏览器高度：'+document.documentElement.clientHeight || document.body.clientHeight;
-	// t += "<br>宽度："+document.getElementById('te').offsetWidth+";"+"宽度："+document.getElementById('te').offsetHeight
-a.innerHTML= t
+var info = document.getElementById('info')
+var t= "屏幕宽度：" + screen.width + "<br>屏幕高度：" + screen.height + "<br>"
+	t += '浏览器宽度：' + (document.documentElement.clientWidth || document.body.clientWidth) + '<br>';
+	t += '浏览器高度：'+ (document.documentElement.clientHeight || document.body.clientHeight) + '<br>';
+	t += 'DPR：' + window.devicePixelRatio;
+info.innerHTML= t
 </script>
 </body>
 </html>
